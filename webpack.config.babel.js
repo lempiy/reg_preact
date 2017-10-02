@@ -6,7 +6,9 @@ import autoprefixer from 'autoprefixer';
 const ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
-	entry: './src/index.js',
+	entry: [
+		'./src/index.js',
+	],
 
 	output: {
 		path: './build',
@@ -45,8 +47,12 @@ module.exports = {
 				loader: 'raw'
 			},
 			{
-				test: /\.(svg|woff|ttf|eot)(\?.*)?$/i,
+				test: /\.(woff|ttf|eot)(\?.*)?$/i,
 				loader: 'file-loader?name=assets/fonts/[name]_[hash:base64:5].[ext]'
+			},
+			{
+				test: /\.(svg|png|jpe?g)(\?.*)?$/i,
+				loader: 'file-loader?name=assets/[name].[ext]'
 			}
 		]
 	},
