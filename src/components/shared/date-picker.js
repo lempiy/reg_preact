@@ -2,7 +2,6 @@ import { h, Component } from 'preact';
 const mdDateTimePicker = require("md-date-time-picker");
 
 const createDatePicker = (input, config) => {
-    console.log(moment(), "moment")
     const dialog = new mdDateTimePicker.default(config);
 
     dialog.trigger = input
@@ -17,12 +16,10 @@ const createDatePicker = (input, config) => {
 
 export default class DatePicker extends Component {
 	shouldComponentUpdate({ input }) {
-        console.log(moment(), "moment")
 		return input !== this.props.input;
     }
     
     componentDidMount() {
-        
         this.dialog = createDatePicker(this.inpEl, {
             type: 'date',
             orientation: 'PORTRAIT',
@@ -30,13 +27,6 @@ export default class DatePicker extends Component {
         });
         componentHandler.upgradeElement(this.el)
     }
-
-	// remove = () => {
-	// 	let { onRemove, todo } = this.props;
-	// 	onRemove(todo);
-    // };
-    
-    
 
 	render({ input, title, name, error }) {
 		return (

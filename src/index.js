@@ -14,6 +14,10 @@ import './style/vendor/icon.css';
 import './style/vendor/date-fonts.css';
 import 'md-date-time-picker/dist/css/mdDateTimePicker.css'
 
+/* MDL selectfield */
+import 'mdl-selectfield/dist/mdl-selectfield.min.css'
+import 'mdl-selectfield/dist/mdl-selectfield.js';
+
 window.moment = moment
 
 render((

@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "md-date-time-picker": "^2.3.0",
+    "mdl-selectfield": "^1.0.4",
     "moment": "^2.18.1",
     "preact": "^8.1.0",
     "preact-redux": "^1.2.0",
