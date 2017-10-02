@@ -17,7 +17,7 @@ module.exports = {
 	},
 
 	resolve: {
-		extensions: ['', '.jsx', '.js', '.json', '.less']
+		extensions: ['', '.jsx', '.js', '.json', '.sass']
 	},
 
 	module: {
@@ -35,8 +35,8 @@ module.exports = {
 				loader: 'babel'
 			},
 			{
-				test: /\.(less|css)$/,
-				loader: ExtractTextPlugin.extract('css?sourceMap!postcss!less?sourceMap')
+				test: /\.(sass|css)$/,
+				loader: ExtractTextPlugin.extract('css?sourceMap!postcss!sass-loader?sourceMap')
 			},
 			{
 				test: /\.json$/,
